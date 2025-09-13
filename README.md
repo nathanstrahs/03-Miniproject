@@ -18,6 +18,13 @@ using
 Other IDE can be used, including Visual Studio Code or
 [rshell](./doc/rshell.md).
 
+
+## Documentation, Design Process
+
+# 9/13/2025
+* We started 
+
+
 ## Hardware
 
 * Raspberry Pi Pico WH [SC1634](https://pip.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w) (WiFi, Bluetooth, with header pins)
