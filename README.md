@@ -68,6 +68,24 @@ Pico MicroPython time.sleep() doesn't error for negative values even though such
 Duty cycle greater than 1 is undefined, so we clip the duty cycle to the range [0, 1].
 
 
+# CONTRIBUTIONS BY MEMBERS
+
+## Design
+
+- Prior to us meeting, Sitong and Xiang set up the python environment that we would use for the rasberry pico
+- The following tasks were done in parallel: 
+- Nathan was working on wiring
+- Sitong was working on code for the buzzer
+- Rayan was working on documentation and coming up with tunes to play on the buzzer
+- Xiang was working on code for the LED
+
+## Testing
+- Everyone tested their own components after completing them with unit testing and simple hardware testing
+
+## Comparisons
+- 
+
+
 ## Reference
 
 * [Pico 2WH pinout diagram](https://datasheets.raspberrypi.com/picow/pico-2-w-pinout.pdf) shows the connections to analog and digital IO.
