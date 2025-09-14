@@ -69,21 +69,21 @@ Duty cycle greater than 1 is undefined, so we clip the duty cycle to the range [
 
 # Documentation, Design Process
 
-Initially, we had one main goal: to create a minimum viable product (MVP) that performed the core functions of our Light Orchestra system. To accelerate progress, we divided tasks early and worked in parallel.
+Initially, we had one main goal: to create a minimum viable product (MVP) that performed the core functions of our Light Orchestra system. To accelerate progress, we divided tasks early and worked in parallel. 
 
-As a group, we first experimented with using VS Code for MicroPython development but encountered driver and REPL connection issues. Following the instructor’s recommendation, we switched to **Thonny IDE**, which gave us a reliable workflow for flashing code and interacting with the board. Below is an image of the Raspberry Pi Pico blinking through our set up.
+As a group, we first experimented with using VS Code for MicroPython development but encountered driver and REPL connection issues. Following the instructor’s recommendation, we switched to **Thonny IDE**, which gave us a reliable workflow for flashing code and interacting with the board. Below is an image of the Raspberry Pi Pico blinking through our set up. 
 
 ![Pico Connected and Blinking](doc/images/blink.jpg)
 
-Following this, we briefly discussed the components we had as a group before splitting up tasks accordingly. First, we discussed the attributes of the light sensor and where it would fall into our overarching design. A diagram of our light sensor analysis is provided below.
+Following this, we briefly discussed the components we had as a group before splitting up tasks accordingly. First, we discussed the attributes of the light sensor and where it would fall into our overarching design. A diagram of our light sensor analysis is provided below. 
 
 ![Light Sensor Diagram](doc/images/light_board.jpg)
 
-We then discussed the Buzzer we had and potential uses for it within our light orchestra machine. Specifically, we thought that it would be a good idea if the light sensor communciated with the buzzer in order to produce sounds based on the lumination readings it processed. A diagram of our buzzer analysis is provided below as well.
+We then discussed the Buzzer we had and potential uses for it within our light orchestra machine. Specifically, we thought that it would be a good idea if the light sensor communciated with the buzzer in order to produce sounds based on the lumination readings it processed. A diagram of our buzzer analysis is provided below as well. 
 
 ![Buzzer Diagram](doc/images/buzzer_board.jpg)
 
-We then split up the work so that we could efficiently work in parallel during this sprint. A thorough breakdown of each team member's work is provided below. Our thinking was to create many smaller proof of concepts (POC) in isolation with individual parts before putting them altogether to form our final light orchestra product.
+We then split up the work so that we could efficiently work in parallel during this sprint. A thorough breakdown of each team member's work is provided below. Our thinking was to create many smaller proof of concepts (POC) in isolation with individual parts before putting them altogether to form our final light orchestra product. 
 
 ### Initial Design Idea
 
@@ -114,11 +114,15 @@ Everyone tested their own components after completing them with unit testing and
 
 ### Problems Encountered
 
-Problems here.
+Problems here. 
 
 ### Final Outcome
 
 MVP. The tentative final code being run on the Rasberry Pi Pico can be seen at `src/Two_State_Music.py`.
+
+### GPT Conversations
+* [Conversation on setting up MicroPico, buzzer and LED](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
+
 
 ## Reference
 
