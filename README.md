@@ -85,6 +85,12 @@ We then discussed the Buzzer we had and potential uses for it within our light o
 
 We then split up the work so that we could efficiently work in parallel during this sprint. A thorough breakdown of each team member's work is provided below. Our thinking was to create many smaller proof of concepts (POC) in isolation with individual parts before putting them altogether to form our final light orchestra product.
 
+### Initial Design Idea
+
+Our initial concept for the Light Orchestra was to make a small, interactive system that would be fun and engaging for kids. The idea was simple: use the Raspberry Pi Pico W to flash an RGB LED in different colors while also creating sounds through a buzzer. The light sensor would let the environment control the sound, so kids could cover or shine light on the sensor to change the pitch of the buzzer like a playful instrument. 
+
+We wanted the design to feel more like a toy or learning tool than a strict engineering demo. That is why we aimed to combine both lights and sounds in a way that children could immediately understand and enjoy. Looking ahead, we also brainstormed the integration of more complex melodies and syncing them with changing LED colors, so that the project could grow from a simple blinking-and-beeping prototype into a miniature “orchestra” experience.
+
 ### Member Work Breakdown
 
 Sitong focused on the **buzzer and light sensor**, recalling how PWM signals control pitch and duration. She started with a POC where the buzzer just played a constant sound. This soon expanded to a more robust approach where the light sensor would integrate and cause the pitch of the sound being played from the buzzer to change accordingly. Sitong also started exploring the integration of more complex melodies. A picture of this POC she tested on can be seen below.
