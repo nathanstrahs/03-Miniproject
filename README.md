@@ -18,13 +18,6 @@ using
 Other IDE can be used, including Visual Studio Code or
 [rshell](./doc/rshell.md).
 
-
-## Documentation, Design Process
-
-# 9/13/2025
-* We started 
-
-
 ## Hardware
 
 * Raspberry Pi Pico WH [SC1634](https://pip.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w) (WiFi, Bluetooth, with header pins)
@@ -74,24 +67,52 @@ For the question below, feel free to use musical scale of your choice!
 Pico MicroPython time.sleep() doesn't error for negative values even though such are obviously incorrect--it is undefined for a system to sleep for negative time.
 Duty cycle greater than 1 is undefined, so we clip the duty cycle to the range [0, 1].
 
+# Documentation, Design Process
 
-# CONTRIBUTIONS BY MEMBERS
+Initially, we had one main goal: to create a minimum viable product (MVP) that performed the core functions of our Light Orchestra system. To accelerate progress, we divided tasks early and worked in parallel.
 
-## Design
+As a group, we first experimented with using VS Code for MicroPython development but encountered driver and REPL connection issues. Following the instructor’s recommendation, we switched to **Thonny IDE**, which gave us a reliable workflow for flashing code and interacting with the board. Below is an image of the Raspberry Pi Pico blinking through our set up.
 
-- Prior to us meeting, Sitong and Xiang set up the python environment that we would use for the rasberry pico
-- The following tasks were done in parallel: 
-- Nathan was working on wiring
-- Sitong was working on code for the buzzer
-- Rayan was working on documentation and coming up with tunes to play on the buzzer
-- Xiang was working on code for the LED
+![Pico Connected and Blinking](doc/images/blink.jpg)
 
-## Testing
-- Everyone tested their own components after completing them with unit testing and simple hardware testing
+Following this, we briefly discussed the components we had as a group before splitting up tasks accordingly. First, we discussed the attributes of the light sensor and where it would fall into our overarching design. A diagram of our light sensor analysis is provided below.
 
-## Comparisons
-- 
+![Light Sensor Diagram](doc/images/light_board.jpg)
 
+We then discussed the Buzzer we had and potential uses for it within our light orchestra machine. Specifically, we thought that it would be a good idea if the light sensor communciated with the buzzer in order to produce sounds based on the lumination readings it processed. A diagram of our buzzer analysis is provided below as well.
+
+![Buzzer Diagram](doc/images/buzzer_board.jpg)
+
+We then split up the work so that we could efficiently work in parallel during this sprint. A thorough breakdown of each team member's work is provided below. Our thinking was to create many smaller proof of concepts (POC) in isolation with individual parts before putting them altogether to form our final light orchestra product.
+
+### Member Work Breakdown
+
+Sitong focused on the **buzzer and light sensor**, recalling how PWM signals control pitch and duration. She started with a POC where the buzzer just played a constant sound. This soon expanded to a more robust approach where the light sensor would integrate and cause the pitch of the sound being played from the buzzer to change accordingly. Sitong also started exploring the integration of more complex melodies. A picture of this POC she tested on can be seen below.
+
+![Buzzer Setup](doc/images/sound_buzzer.jpg)
+
+Xiang explored the **LED**, verifying the capabilties and use-cases of the provided RGB LED. The initial use of the LED proved harder than expected since it did not work first try. A deeper dive into exploring whether the LED was a Common Cathode or Common Anode was necessary. Through the use of a few separate electrical components and a breadboard, Xiang made a robust set up to test the light and eventually create a more complex piece of code which would trigger the light to flash in a unique manner, fitting for our final product. A picture of the POC he set up can be seen below.
+
+![Light Setup](doc/images/light.jpg)
+
+Nathan concentrated on **wiring and hardware**. He was responsible for setting up the breadboard and ensuring each component had a stable connection to the Raspberry Pi Pico. After choosing an ideal pin layout, he connected the photoresistor and buzzer to their assigned pins, checking each connection carefully to avoid shorts. Once everything was wired, he worked with other group members to help them run their test code they were working on in isolation, which allowed the rest of the team to focus on writing code without worrying about hardware issues. A picture of Nathan’s early assembly process and final build can be seen below.
+
+![Wiring Layout](doc/images/wiring.jpg)
+![Wiring Done](doc/images/buzzer.jpg)
+
+Rayan took ownership of **documentation and management**, writing the README and compiling the design notes so that the team’s progress was clearly recorded. He helped split tasks so that each member had a clear, parallel workstream during Sprint 1. In addition, he assisted Xiang on the LED work, helping to test different wiring configurations and measure readings with a multimeter. He also worked with Sitong to refine the approach for more complex melodies. He helped integrate all the isolated components into a final singular product as well.
+
+### Testing
+
+Everyone tested their own components after completing them with unit testing and simple hardware testing. For initial wiring, the board was simply connected to a host laptop to ensure communication was established. For the LED, a breadboard was used to test the LED along with more complex LED flashing patterns in isolation. The code for this is provided in `testing/led_test.py`. For the buzzer, simple code was executed to ensure the buzzer could make sounds at the pitches we desired. The code for this is provided in `testing/buzzer_test.py`. 
+
+### Problems Encountered
+
+Problems here.
+
+### Final Outcome
+
+MVP. The tentative final code being run on the Rasberry Pi Pico can be seen at `src/Two_State_Music.py`.
 
 ## Reference
 
