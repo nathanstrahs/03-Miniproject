@@ -8,14 +8,14 @@ Each team must provide a micro-USB cable that connects to their laptop to plug i
 The cord must have the data pins connected.
 Splitter cords with multiple types of connectors fanning out may not have data pins connected.
 Such micro-USB cords can be found locally at Microcenter, convenience stores, etc.
-The student laptop is used to program the Pi Pico.
+The student's laptop is used to program the Pi Pico.
 The laptop software to program and debug the Pi Pico works on macOS, Windows, and Linux.
 
 This miniproject focuses on using
 [MicroPython](./doc/micropython.md)
 using
 [Thonny IDE](./doc/thonny.md).
-Other IDE can be used, including Visual Studio Code or
+Other IDEs can be used, including Visual Studio Code or
 [rshell](./doc/rshell.md).
 
 ## Hardware
@@ -43,7 +43,7 @@ On the Pico W, GP28 is ADC2, accessed with `machine.ADC(28)`.
 ### Piezo buzzer details
 
 PWM (Pulse Width Modulation) can be used to generate analog signals from digital outputs.
-The Raspberry Pi Pico has eight PWM groups each with two PWM channels.
+The Raspberry Pi Pico has eight PWM groups, each with two PWM channels.
 The [Pico WH pinout diagram](https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.pdf)
 shows that almost all Pico pins can be used for multiple distinct tasks as configured by MicroPython code or other software.
 In this exercise, we will generate a PWM signal to drive a speaker.
@@ -51,13 +51,13 @@ In this exercise, we will generate a PWM signal to drive a speaker.
 GP16 is one of the pins that can be used to generate PWM signals.
 Connect the speaker with the black wire (negative) to GND and the red wire (positive) to GP16.
 
-In a more complete project, we would use additional resistors and capacitors with an amplifer to boost the sound output to a louder level with a bigger speaker.
+In a more complete project, we would use additional resistors and capacitors with an amplifier to boost the sound output to a louder level with a bigger speaker.
 The sound output is quiet but usable for this exercise.
 
 Musical notes correspond to particular base frequencies and typically have rich harmonics in typical musical instruments.
 An example soundboard showing note frequencies is [clickable](https://muted.io/note-frequencies/).
-Over human history, the corresspondance of notes to frequencies has changed over time and location and musical cultures.
-For the question below, feel free to use musical scale of your choice!
+Over human history, the correspondence of notes to frequencies has changed over time and location, and musical cultures.
+For the question below, feel free to use the musical scale of your choice!
 
 [Music Examples](https://github.com/twisst/Music-for-Raspberry-Pi-Pico/blob/main/play.py)
 
@@ -71,7 +71,7 @@ Duty cycle greater than 1 is undefined, so we clip the duty cycle to the range [
 
 Initially, we had one main goal: to create a minimum viable product (MVP) that performed the core functions of our Light Orchestra system. To accelerate progress, we divided tasks early and worked in parallel. 
 
-As a group, we first experimented with using VS Code for MicroPython development but encountered driver and REPL connection issues. Following the instructor’s recommendation, we switched to **Thonny IDE**, which gave us a reliable workflow for flashing code and interacting with the board. Below is an image of the Raspberry Pi Pico blinking through our set up. 
+As a group, we first experimented with using VS Code for MicroPython development, but encountered driver and REPL connection issues. Following the instructor’s recommendation, we switched to **Thonny IDE**, which gave us a reliable workflow for flashing code and interacting with the board. Below is an image of the Raspberry Pi Pico blinking through our setup. 
 
 ![Pico Connected and Blinking](doc/images/blink.jpg)
 
@@ -93,11 +93,11 @@ We wanted the design to feel more like a toy or learning tool than a strict engi
 
 ### Member Work Breakdown
 
-Sitong focused on the **buzzer and light sensor**, recalling how PWM signals control pitch and duration. She started with a POC where the buzzer just played a constant sound. This soon expanded to a more robust approach where the light sensor would integrate and cause the pitch of the sound being played from the buzzer to change accordingly. Sitong also started exploring the integration of more complex melodies. A picture of this POC she tested on can be seen below.
+Sitong focused on the **buzzer and light** sensor, recalling how PWM signals control pitch and duration. She started with a POC where the buzzer just played a constant sound. This soon expanded to a more robust approach where the light sensor would integrate and cause the pitch of the sound being played from the buzzer to change accordingly. She also encountered a problem: when covering the light source or exposing the sensor fully to light, the pitch change was not obvious, so she designed the code to detect real-time light intensity every second and print it, then reset the thresholds to distinguish between bright and dark light to solve this issue. Sitong also started exploring the integration of more complex melodies. A picture of the POC she tested on can be seen below.
 
 ![Buzzer Setup](doc/images/sound_buzzer.jpg)
 
-Xiang explored the **LED**, verifying the capabilties and use-cases of the provided RGB LED. The initial use of the LED proved harder than expected since it did not work first try. A deeper dive into exploring whether the LED was a Common Cathode or Common Anode was necessary. Through the use of a few separate electrical components and a breadboard, Xiang made a robust set up to test the light and eventually create a more complex piece of code which would trigger the light to flash in a unique manner, fitting for our final product. A picture of the POC he set up can be seen below.
+Xiang explored the **LED**, verifying the capabilities and use-cases of the provided RGB LED. The initial use of the LED proved harder than expected since it did not work first try. A deeper dive into exploring whether the LED was a Common Cathode or Common Anode was necessary. Through the use of a few separate electrical components and a breadboard, Xiang made a robust setup to test the light and eventually create a more complex piece of code that would trigger the light to flash in a unique manner, fitting for our final product. A picture of the POC he set up can be seen below.
 
 ![Light Setup](doc/images/light.jpg)
 
@@ -110,7 +110,7 @@ Rayan took ownership of **documentation and management**, writing the README and
 
 ### Testing
 
-Everyone tested their own components after completing them with unit testing and simple hardware testing. For initial wiring, the board was simply connected to a host laptop to ensure communication was established. For the LED, a breadboard was used to test the LED along with more complex LED flashing patterns in isolation. The code for this is provided in `testing/led_test.py`. For the buzzer, simple code was executed to ensure the buzzer could make sounds at the pitches we desired. The code for this is provided in `testing/buzzer_test.py`. 
+Everyone tested their own components after completing them with unit testing and simple hardware testing. For initial wiring, the board was simply connected to a host laptop to ensure communication was established. For the LED, a breadboard was used to test the LED along with more complex LED flashing patterns in isolation. The code for this is provided in `testing/led_test.py`. For the buzzer, a simple code was executed to ensure the buzzer could make sounds at the pitches we desired. The code for this is provided in `testing/buzzer_test.py`. 
 
 ### Problems Encountered
 
@@ -118,10 +118,10 @@ Problems here.
 
 ### Final Outcome
 
-MVP. The tentative final code being run on the Rasberry Pi Pico can be seen at `src/Two_State_Music.py`.
+MVP. The tentative final code being run on the Raspberry Pi Pico can be seen at `src/Two_State_Music.py`.
 
 ### GPT Conversations
-* [Conversation on setting up MicroPico, buzzer and LED](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
+* [Conversation on setting up MicroPico, buzzer, and LED](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
 
 
 ## Reference
