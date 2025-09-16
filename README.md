@@ -127,7 +127,7 @@ Problems here.
 MVP. The tentative final code being run on the Raspberry Pi Pico can be seen at `src/Two_State_Music.py`.
 
 ### GPT Conversations
-* [Conversation on setting up MicroPico, buzzer, and LED](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
+* [Conversation on setting up MicroPico, buzzer, LED, and integration](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
 
 
 ## Reference
