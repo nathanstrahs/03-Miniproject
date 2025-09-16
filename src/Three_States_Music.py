@@ -11,8 +11,8 @@ buzzer.duty_u16(32768)   # 50% duty (volume)
 # RGB LED (common anode) on GP10, GP11, GP12
 # -----------------
 red = Pin(10, Pin.OUT)
-green = Pin(11, Pin.OUT)
-blue = Pin(12, Pin.OUT)
+green = Pin(12, Pin.OUT)
+blue = Pin(11, Pin.OUT)
 
 def set_color(r, g, b):
     """
