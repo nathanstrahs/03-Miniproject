@@ -93,7 +93,7 @@ We wanted the design to feel more like a toy or learning tool than a strict engi
 
 ### Member Work Breakdown
 
-Sitong focused on the **buzzer and light** sensor, recalling how PWM signals control pitch and duration. She started with a POC where the buzzer just played a constant sound. This soon expanded to a more robust approach where the light sensor would integrate and cause the pitch of the sound being played from the buzzer to change accordingly. She also encountered a problem: when covering the light source or exposing the sensor fully to light, the pitch change was not obvious, so she designed the code to detect real-time light intensity every second and print it, then reset the thresholds to distinguish between bright and dark light to solve this issue. Sitong also started exploring the integration of more complex melodies. A picture of the POC she tested on can be seen below.
+Sitong focused on the **buzzer and light** sensor, recalling how PWM signals control pitch and duration. She started with a POC where the buzzer just played a constant sound. This soon expanded to a more robust approach where the light sensor would integrate and cause the pitch of the sound being played from the buzzer to change accordingly. She also encountered a problem: when covering the light source or exposing the sensor fully to light, the pitch change was not obvious, so she designed the code to detect real-time light intensity every second and print it, then reset the thresholds to distinguish between bright and dark light to solve this issue. Sitong also started exploring the integration of more complex melodies. A picture of the POC she tested on can be seen below. 
 
 ![Buzzer Setup](doc/images/sound_buzzer.jpg)
 
@@ -105,6 +105,12 @@ Nathan concentrated on **wiring and hardware**. He was responsible for setting u
 
 ![Wiring Layout](doc/images/wiring.jpg)
 ![Wiring Done](doc/images/buzzer.jpg)
+
+### Integration 
+After coming together to implement the pieces of the project that each of us have been working on, we ended up with a electronic musical instrument that 
+has three tones (based on lighting conditions), and an RGB LED light that switches between red, green, and blue based on what tone the instrument is playing. 
+
+
 
 Rayan took ownership of **documentation and management**, writing the README and compiling the design notes so that the team’s progress was clearly recorded. He helped split tasks so that each member had a clear, parallel workstream during Sprint 1. In addition, he assisted Xiang on the LED work, helping to test different wiring configurations and measure readings with a multimeter. He also worked with Sitong to refine the approach for more complex melodies. He helped integrate all the isolated components into a final singular product as well.
 
