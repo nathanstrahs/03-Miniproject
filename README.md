@@ -114,7 +114,8 @@ Everyone tested their own components after completing them with unit testing and
 
 ### Problems Encountered
 
-Problems here. 
+Sitong encountered a problem: when covering the light source or exposing the sensor fully to light, the pitch change was not obvious, so she designed the code to detect real-time light intensity every second and print it, then reset the thresholds to distinguish between bright and dark light to solve this issue. 
+
 
 ### Final Outcome
 
