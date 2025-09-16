@@ -12,8 +12,8 @@ led_vcc.value(1)
 
 # Setup pins as outputs
 red = Pin(10, Pin.OUT)
-green = Pin(13, Pin.OUT)
-blue = Pin(12, Pin.OUT)
+green = Pin(12, Pin.OUT)
+blue = Pin(11, Pin.OUT)
 
 def set_color(r, g, b):
     """
@@ -40,3 +40,4 @@ while True:
     set_color(0, 0, 0)   # White (for common cathode; off for common anode)
     time.sleep(1)
     set_color(1, 1, 1)   # All off (for common cathode; all on for common anode)
+
