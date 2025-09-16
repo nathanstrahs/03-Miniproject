@@ -106,12 +106,6 @@ Nathan concentrated on **wiring and hardware**. He was responsible for setting u
 ![Wiring Layout](doc/images/wiring.jpg)
 ![Wiring Done](doc/images/buzzer.jpg)
 
-### Integration 
-After coming together to implement the pieces of the project that each of us have been working on, we ended up with a electronic musical instrument that 
-has three tones (based on lighting conditions), and an RGB LED light that switches between red, green, and blue based on what tone the instrument is playing. 
-
-
-
 Rayan took ownership of **documentation and management**, writing the README and compiling the design notes so that the team’s progress was clearly recorded. He helped split tasks so that each member had a clear, parallel workstream during Sprint 1. In addition, he assisted Xiang on the LED work, helping to test different wiring configurations and measure readings with a multimeter. He also worked with Sitong to refine the approach for more complex melodies. He helped integrate all the isolated components into a final singular product as well.
 
 ### Testing
@@ -124,7 +118,7 @@ Problems here.
 
 ### Final Outcome
 
-MVP. The tentative final code being run on the Raspberry Pi Pico can be seen at `src/Two_State_Music.py`.
+We successfully created an MVP for this project. The  final code being run on the Raspberry Pi Pico can be seen at `src/Three_States_Music.py`. All four of our group members put the pieces of the project that each of us have been working on together. We ended up with an electronic musical instrument that has three tones (based on lighting conditions), and an RGB LED light that switches between red, green, and blue based on what tone the instrument is playing. The light changing based on lighting conditions can be seen in the 3 images below. The sound being played in each image is also different. We believe this product is perfect for entertaining our key users, children.
 
 ### GPT Conversations
 * [Conversation on setting up MicroPico, buzzer, LED, and integration](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
