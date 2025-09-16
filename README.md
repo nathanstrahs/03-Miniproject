@@ -120,7 +120,12 @@ Problems here.
 
 We successfully created an MVP for this project. The  final code being run on the Raspberry Pi Pico can be seen at `src/Three_States_Music.py`. All four of our group members put the pieces of the project that each of us have been working on together. We ended up with an electronic musical instrument that has three tones (based on lighting conditions), and an RGB LED light that switches between red, green, and blue based on what tone the instrument is playing. The light changing based on lighting conditions can be seen in the 3 images below. The sound being played in each image is also different. We believe this product is perfect for entertaining our key users, children.
 
+![Red](doc/images/red.jpg)
+![Blue](doc/images/blue.jpg)
+![Green](doc/images/green.jpg)
+
 ### GPT Conversations
+We utilized LLMs to assist us with this project in an effective manner. Below is a sample conversation we used to quickly ramp up our knowledge on the components and MicroPython in general.
 * [Conversation on setting up MicroPico, buzzer, LED, and integration](https://chatgpt.com/share/68c63341-16cc-8011-a83d-0ff89710128b)
 
 
